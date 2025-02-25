@@ -10,7 +10,13 @@ public class Exercise3 {
      * @return arvude summa, antud näide puhul 50.
      */
     public static int eval(String str) {
-        throw new UnsupportedOperationException();
+        str = str.replace(" ", "");
+        String[] parts = str.split("\\+");
+        int sum = 0;
+        for (String part : parts) {
+            sum += Integer.parseInt(part);
+        }
+        return sum;
     }
 
     /**
@@ -21,7 +27,11 @@ public class Exercise3 {
      * @return listile vastav map nimedest arvudesse.
      */
     public static Map<String, Integer> createMap(List<String> list) {
-        throw new UnsupportedOperationException();
+        Map<String, Integer> map = new HashMap<>();
+        for (int i = 0; i < list.size(); i += 2) {
+            map.put(list.get(i), Integer.parseInt(list.get(i + 1)));
+        }
+        return map;
     }
 
     public static void main(String[] args) {
@@ -29,5 +39,9 @@ public class Exercise3 {
         Map<String, Integer> ageMap = createMap(Arrays.asList("Carmen", "17", "Jürgen", "44", "Tarmo", "10", "Mari", "83"));
         System.out.println(ageMap.get("Carmen")); // vastus: 17
         System.out.println(ageMap.get("Tarmo"));  // vastu: 10
+
+        for (Map.Entry<String, Integer> entry : ageMap.entrySet()) {
+            System.out.println(entry.getKey() + " on " + entry.getValue() + " aastane.");
+        }
     }
 }

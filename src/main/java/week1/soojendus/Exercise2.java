@@ -1,6 +1,5 @@
 package week1.soojendus;
 
-/*
 import week1.soojendus.animals.Animal;
 import week1.soojendus.animals.Kass;
 import week1.soojendus.animals.Koer;
@@ -24,4 +23,3 @@ public class Exercise2 {
         for (Animal animal : animals) animal.makeNoise();
     }
 }
-*/

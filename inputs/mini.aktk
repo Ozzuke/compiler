@@ -8,3 +8,6 @@ print x+    78 -23
 print y
 y = y + 1 # kirjutame muutujasse uue väärtuse
 print y
+
+a = 5 - 120 + 3 # peaks olema -112
+print a
